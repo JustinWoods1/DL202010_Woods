@@ -2,3 +2,6 @@ Running: xsim.dir/sseg4_TDMTEST_behav/xsimk.exe -simmode gui -wdb sseg4_TDMTEST_
 Design successfully loaded
 Design Loading Memory Usage: 5044 KB (Peak: 5044 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 13808 KB (Peak: 13808 KB)
+Simulation CPU Usage: 984 ms

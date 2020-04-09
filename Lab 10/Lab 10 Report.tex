@@ -63,44 +63,51 @@ showspaces=false,                        % don't underscore spaces
 \maketitle
 
 \section*{Summary}
-
-\section{Questions}
+In this lab, we used synchronous design methodology to design a calculator. This was done by creating a counter module which was tested. This was done using a similar method as creating a register, but differed in that it has no input. A form of sseg4 was created to combine the counter and a display driver, also tested. This 4-digit display was then combined with the top level calculator form Lab 9 and implemented into the Basys3 board.
+\section*{Questions}
 
 \begin{enumerate}
-	\item How should I format them?
-	Use the same numbered list format as in the assignment (like this).
-	\item Do I need to include the original question?
-	Yes, include both the question and the answer to it.
-	\item Should I put the question on the first line?
-	Yes, then skip a line and write your answer.  This produces a nicely 
-	formatted result.
-\end{enumerate}
+	\item What are the three main “groups” of the RTL deﬁnition of sequential logic?
+	
+	State memory , next-state, output logic
+	
+	\item Annotated Counter-timer
+	\begin{figure}[ht]\centering
+		\includegraphics[width=0.5\textwidth,trim =0 200 0 200,clip,angle=0,origin=c]{countertimer}
+		\caption{Annotated counter timer}
+		\label{fig:sim_with_table}
+	\end{figure}
 
+	\item If instead of a counter, you wanted to make a shift register that moved the input bits from right to left (low to high). What would you put on the line Q next = /*???*/?
+	
+	Qreg - 1;
+\end{enumerate}
+\clearpage
 \section*{Results}
 
 \begin{figure}[ht]\centering
 	
-	\begin{tabular}{l|rrrrrrrrrrr}	
-		Time (ns): & 0-5 & 5-10 & 10-15 & 15-20 & 20-25 & 25-30 & 30-35 & 35-40 & 40-45 & 45-50 & 50 55 \\
+	\begin{tabular}{l|rrrrrrrrrrrr}	
+		Time (ns): & 0-5 & 5-10 & 10-15 & 15-20 & 20-25 & 25-30 & 30-35 & 35-40 & 40-45 & 45-50 & 50-55 & 55-60 \\
 		\midrule
-		D (hex) & 0 & 0 	  & A & A & 3 	    & 3 	  & 0 	    & 0 & 0$\to$6 & 6 & 6 \\
-		clk     & 0 & 1 	  & 0 & 1 & 0 	    & 1 	  & 0 	    & 1 & 0 	  & 1 & 0 \\
-		en  	& 0 & 0 	  & 1 & 1 & 1$\to$0 & 0$\to$1 & 1$\to$0 & 0 & 0$\to$1 & 1 & 1 \\
-		rst 	& 0 & 0$\to$1 & 0 & 0 & 0 		& 0 	  & 0		& 0 & 0		  & 0 & 0 \\
+		clk     & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1\\
+		en  	& 0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 1\\
+		rst 	& 0 & 1 & 0 & 0 & 0	& 0 & 0 & 0 & 0	& 0 & 0 & 0\\
 		\midrule
-		Q(hex) 	& X & 0$\to$0 & 0 & A & A 		& A 	  & A 		& A & A 	  & 6 & 6 \\
+		count 	& X & 0 & 0 & 1 & 1 & 2 & 2	& 2 & 2 & 3 & 3 & 0 \\
+		tick	& X & 0 & 0 & 0 & 0 & 0 & 0	& 0 & 0 & 1 & 1 & 0 \\
 		\bottomrule
 	\end{tabular}
 	\bigskip
-	\includegraphics[width=1\textwidth,angle=0,origin=c]{registerWaveform}
-	\caption{Register Simulation Waveform and ERT}
+	\includegraphics[width=1\textwidth,angle=0,origin=c]{counterWaveform}
+	\caption{Counter Simulation Waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
 	
 	\begin{tabular}{l|rrrrrr}
-		Time (ns): & 0-10 & 10-20 & 20-30 & 30-40 & 40-50 & 50-60 \\
+		Time (ms): & 0-1 & 1-2 & 2-3 & 3-4 & 4-5 & 50-60 \\
 		\midrule
 		in0 & 4  & 14& 1 & 1 & 1 & 8 \\
 		in1 & 10 & 5 & 0 & 0 & 1 & 0 \\
@@ -110,160 +117,241 @@ showspaces=false,                        % don't underscore spaces
 		\bottomrule
 	\end{tabular}
 	\bigskip
-	\includegraphics[width=1\textwidth,angle=0,origin=c]{aluWaveform}
-	\caption{ALU Simulation Waveform and ERT}
+	\includegraphics[width=1\textwidth,angle=0,origin=c]{sseg4tdmWaveform}
+	\caption{sseg4TDM Simulation Waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\includegraphics[width=1\textwidth,angle=0,origin=c]{toplevelWaveform}
-	\caption{Top Level Waveform}
+	\includegraphics[width=0.65\textwidth,angle=90,origin=c]{sseg4tdmdiagram}
+	\caption{sseg4tdm Schematic}
 	\label{fig:sim_with_table}
 \end{figure}
-	\clearpage
 
+\begin{figure}[ht]\centering
+	\includegraphics[width=0.65\textwidth,trim =0 0 0 0,clip,angle=90,origin=c]{calclab10diagram}
+	\caption{calclab10 Schematic}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\clearpage
 \section*{Code}
 
 \begin{lstlisting}[style=Verilog,
-caption=Register Source Code,
+caption=Counter Source Code,
 label=MUX w/ two inputs Source Code
 ]
-	module register #(parameter N=1) 
-		(
-		input clk, rst, en, input [N-1:0] D,
-		output reg [N-1:0] Q
+	module counter #(parameter N=1) 
+		( 
+		input clk, rst, en,
+		output [N-1:0] count, 
+		output tick 
 		);
 		
+		// internal signals
+		reg [N-1:0] Q_reg , Q_next;
+		
+		// register (state memory)
 		always @(posedge clk, posedge rst) 
 		begin
-			if (rst==1)
-				Q <= 0 ;
-			else if (en==1)
-				Q <= D ;
+			if (rst) 
+				Q_reg <= 0; 
+			else
+				Q_reg <= Q_next;
 		end
+		
+		// next -state logic 
+		always @* 
+			begin 
+			if (en) 
+				Q_next = Q_reg + 1; 
+			else 
+				Q_next = Q_reg; // no change 
+		end
+		
+		// output logic 
+		assign count = Q_reg; 
+		assign tick = (Q_reg=={N{1'b1}}) ? 1'b1 : 1'b0;
+	
 	endmodule
 \end{lstlisting}
+\clearpage
 
 \begin{lstlisting}[style=Verilog,
-caption=Register Test,
+caption=Counter Test,
 label=MUX2 Test
 ]
-	module registerTEST();
+	module counterTest();
 	
-		reg [3:0] D;
 		reg clk, en, rst;
-		wire [3:0] Q;
+		wire [1:0] count;
+		wire tick;
 		
-		register #(.N(4)) r(.D(D), .clk(clk),
+		counter #(.N(2)) c(.count(count), .clk(clk),
 			.en(en), .rst(rst),
-			.Q(Q) );
-		
+			.tick(tick) );
+	
 		always begin 
 			clk = ~clk; #5; 
 		end
 		
 		// this block only runs once
 		initial begin
-			clk=0; en=0; rst=0; D=4'h0; #7;
-			rst = 1; #3;
+			clk=0; en=0; rst=0; ; #5;
+			rst = 1; #5;
 			// reset
-			D = 4'hA; en = 1; rst = 0; #10;
-			D = 4'h3;   #2;
+			en = 1; rst = 0; #10;
 			en = 0;     #5;
-			en = 1;     #3;
-			D = 4'h0;   #2;
+			en = 1;     #5;
 			en = 0;     #10;
-			en = 1;     #2;
-			D = 4'h6;   #11;
+			en = 1;     #5;
 			$finish;
 		end 
 	endmodule
 \end{lstlisting}
 
-\clearpage
 \begin{lstlisting}[style=Verilog,
-caption=ALU Source Code,
+caption= Sseg4TDM Source Code,
 label=MUX w/ four inputs Source Code
 ]
-	module alu #(parameter N=8) 
-		( 
-		output reg[N-1:0] out,
-		input [N-1:0] in0,
-		input [N-1:0] in1,
-		input [3:0] op 
+	module sseg4_TDM(
+		input [15:0]data,
+		input hex_dec, sign,
+		input reset, clock,
+		output [6:0] seg,
+		output [3:0] an,
+		output dp
 		);
 		
-		// Local parameters
-		parameter ADD =0; 
-		parameter SUB =1; 
-		parameter AND =2; 
-		parameter OR  =3; 
-		parameter XOR =4;
+		wire [15:0] mux2mux4, bcd2mux2;
+		wire [6:0] ssegmux2;
+		wire [3:0] mux4sseg, anan;
+		wire [1:0] digit_sel;
+		wire andmux2;
+		wire timer2counter;
 		
-		always @* 
-		begin 
-			case(op)
-				ADD: out = in0 + in1;
-				SUB: out = in0 - in1;
-				AND: out = in0 & in1;
-				OR: out = in0 | in1;
-				XOR: out = in0 ^ in1;
-				default: out = in0;
-			endcase
-		end
-	endmodule
-\end{lstlisting}
-
-\begin{lstlisting}[style=Verilog,
-caption=ALU Test,
-label=MUX4 Test
-]
-	module aluTEST();
+		bcd11 bcd11in(
+			.in(data[10:0]),
+			.out(bcd2mux2)
+			);
+		mux2 #(.N(16)) mux2num1(
+			.in0(data), .in1(bcd2mux2), .sel(hex_dec),
+			.out(mux2mux4)
+			);
+		mux4 mux4num1(
+			.in3(mux2mux4[15:12]), .in2(mux2mux4[11:8]), 
+			.in1(mux2mux4[7:4]), .in0(mux2mux4[3:0]),
+			.sel(digit_sel),
+			.out(mux4sseg)
+			);
+		sseg_decoder ssegdecode(
+			.in(mux4sseg),
+			.out(ssegmux2)
+			);
+		mux2 #(.N(7)) mux2num2(
+			.in1(7'b0111111), .in0(ssegmux2), .sel(andmux2),
+			.out(seg[6:0])
+			);
+		and A1(
+			andmux2,
+			sign, ~anan[3]
+			);
+		an_decoder andecode(
+			.in(digit_sel),
+			.out(anan)
+			);
+		
+		counter #(.N(18)) timer(
+			.en(1'b1), .clk(clock), .rst(reset),
+			.count(), .tick(timer2counter)
+			);
+		
+		counter #(.N(2)) counter2(
+			.en(1'b1), .clk(timer2counter), .rst(reset),
+			.count(digit_sel), .tick()
+			);
+		
+		assign an = anan;
+		assign dp = 1;
 	
-		wire[7:0] out;
-		reg [7:0] in0, in1;
-		reg [3:0] op;
-		
-		alu #(.N(8)) a(.in0(in0), .in1(in1), .op(op),
-			.out(out) );
-		
-		initial begin
-			op = 0; in0 = 4; in1 = 10; #10			
-			op = 1; in0 = 14; in1 = 5; #10			
-			op = 2; in0 = 1; in1 = 0; #10			
-			op = 3; in0 = 1; in1 = 0; #10
-			op = 4; in0 = 1; in1 = 1; #10
-			op = 5; in0 = 8; in1 = 0; #10
-			$finish;  
-		end          
 	endmodule
 \end{lstlisting}
 \clearpage
 \begin{lstlisting}[style=Verilog,
-caption=Top Level Source Code,
-label=Anode Decoder Source Code
+caption=Sseg4TDM Test,
+label=MUX4 Test
 ]
-	module top_lab9(
-		input btnU, btnD, clk, btnC,
+	module sseg4_TDMTEST();
+	
+		reg [15:0]data;
+		reg hex_dec, sign;
+		reg reset, clock;
+		wire [6:0] seg;
+		wire [3:0] an;
+		wire dp;
+		
+		sseg4_TDM  s(.data(data), .hex_dec(hex_dec),
+			.sign(sign), .reset(reset), .clock(clock),
+			.seg(seg), .an(an), .dp(dp)
+			);
+		
+		always begin 
+			clock = ~clock; #5; 
+		end
+		
+		// this block only runs once
+		initial begin
+			clock = 0; reset=0; #5;
+			reset = 1; #5;
+		
+			// reset
+			reset = 0; sign = 0; hex_dec = 1; 
+			data = 16'b0000000000000001; #1000000;
+			data = 16'b0000000000000010; #1000000;
+			data = 16'b0000000000000011; #1000000;
+			data = 16'b0000000000000100; #1000000;
+			data = 16'b0000000000000101; #1000000;
+			data = 16'b0000000000000110; #1000000;
+			data = 16'b0000000000000111; #1000000;
+			data = 16'b0000000000001000; #1000000;
+			data = 16'b0000000000001001; #1000000;
+			data = 16'b0000000000001010; #1000000;
+			data = 16'b0000000000001011; #1000000;
+			data = 16'b0000000000001100; #1000000;
+			data = 16'b0000000000001101; #1000000;
+			data = 16'b0000000000001110; #1000000;
+			data = 16'b0000000000001111; #1000000;
+			
+			$finish;
+		end 
+	endmodule
+\end{lstlisting}
+\clearpage
+\begin{lstlisting}[style=Verilog,
+caption=CalcLab10,
+label=MUX2 Test
+]
+	module calc_lab10(
+		input btnU, btnD, clock, btnC,
 		input [15:0]sw,
-		output [15:0] led
+		output [6:0] seg,
+		output [3:0] an,
+		output [15:0] led,
+		output dp
 		);
 	
-		wire [7:0]reg1out, a1out, reg2out;
+	
+		top_lab9 calc_unit(
+			.btnU(btnU), .btnD(btnD), .clk(clock), .btnC(btnC),
+			.sw(sw),
+			.led(led)
+			);
 		
-		register #(.N(8)) reg1 (.D(sw[7:0]), .clk(clk),
-			.en(btnD), .rst(btnC),
-			.Q(reg1out) ); 
-		
-		alu #(.N(8)) a1 (.in1(reg1out), .in0(sw[7:0]), .op(sw[11:8]),
-			.out(a1out) ); 
-		
-		register #(.N(8)) reg2 (.D(a1out), .clk(clk),
-			.en(btnU), .rst(btnC),
-			.Q(reg2out) );
-			
-		assign led[7:0] = reg1out;
-		assign led[15:8] = reg2out;
+		sseg4_TDM disp_unit(
+			.data({8'b00000000, led[15:8]}), .hex_dec(sw[15]),
+			.sign(sw[14]), .reset(btnC), .clock(clock),
+			.seg(seg), .an(an), .dp(dp)
+			);
 	
 	endmodule
 \end{lstlisting}

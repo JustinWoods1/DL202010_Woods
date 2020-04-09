@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1586444897">
+<GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1586450658">
   <File Type="BITSTR-BMM" Name="calc_lab10_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="calc_lab10_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="calc_lab10_timing_summary_init.rpt"/>

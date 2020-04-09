@@ -9,7 +9,6 @@ module calc_lab10(
     output dp
     );
     
-    wire [7:0] ledsseg;
        
     top_lab9 calc_unit(
         .btnU(btnU), .btnD(btnD), .clk(clock), .btnC(btnC),

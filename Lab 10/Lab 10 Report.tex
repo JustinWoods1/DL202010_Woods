@@ -106,14 +106,14 @@ In this lab, we used synchronous design methodology to design a calculator. This
 
 \begin{figure}[ht]\centering
 	
-	\begin{tabular}{l|rrrrrr}
-		Time (ms): & 0-1 & 1-2 & 2-3 & 3-4 & 4-5 & 50-60 \\
+	\begin{tabular}{l|rrrrrrrrrr}
+		Time (ms): & 0-1 & 1-2 & 2-3 & 3-4 & 4-5 & 5-6 & 6-7 & 7-8 & 8-9 & 9-10\\
 		\midrule
-		in0 & 4  & 14& 1 & 1 & 1 & 8 \\
-		in1 & 10 & 5 & 0 & 0 & 1 & 0 \\
-		op  & 0  & 1 & 2 & 3 & 4 & 5 \\
+		data  & 1 & 2 & 3      & 4 & 5 & 	  6 & 7 & 	   8 & 9 & 10 \\
+		sign  & 0 & 0 & 0      & 0 & 0 &   	  0 & 0 & 	   0 & 0 & 0 \\
+		hexDec & 1& 1 & 1      & 1 & 1 &      1 & 1 &      1 & 1 & 1 \\ 
 		\midrule
-		out & E  & 9 & 0 & 1 & 0 & 8 \\
+		an    & e & e & e$to$d & d & d & d$to$b & b & b$to$7 & 7 & 7 \\
 		\bottomrule
 	\end{tabular}
 	\bigskip

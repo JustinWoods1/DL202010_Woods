@@ -486,3 +486,263 @@ selectButton("NEXT", "Next >"); // JButton (j, c)
 selectButton("FINISH", "Finish"); // JButton (j, c)
 // 'h' command handler elapsed time: 10 seconds
 dismissDialog("Add Sources"); // c (cp)
+// Elapsed time: 92 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Reset to Previous Step : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cp)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// f (cp): Launch Runs: addNotify
+dismissDialog("Reset to Previous Step"); // bx (cp)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 13 seconds
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Fri Apr 10 11:43:32 2020] Launched impl_1... Run output will be captured here: C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/impl_1/runme.log 
+// TclEventType: RUN_FAILED
+// ah (cp): Implementation Failed: addNotify
+// Elapsed time: 35 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cp)
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, sseg.xdc]", 10, false); // B (D, cp)
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 137 MB (+2000kb) [18:06:15]
+// Tcl Message: reorder_files -fileset constrs_1 -after {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/led.xdc} {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/sseg.xdc}} 
+// HMemoryUtils.trashcanNow. Engine heap size: 769 MB. GUI used memory: 61 MB. Current time: 4/10/20, 11:44:39 AM CDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, btnC.xdc]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, btnC.xdc]", 4, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnC.xdc}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnC.xdc}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, btnD.xdc]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, btnD.xdc]", 4, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnD.xdc}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnD.xdc}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, btnU.xdc]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, btnU.xdc]", 4, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnU.xdc}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnU.xdc}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, clock.xdc]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, clock.xdc]", 4, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/clock.xdc}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/clock.xdc}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, led.xdc]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, led.xdc]", 4, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/led.xdc}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/led.xdc}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, switches.xdc]", 5, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, switches.xdc]", 5, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/switches.xdc}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/switches.xdc}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, sseg.xdc]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, sseg.xdc]", 4, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/sseg.xdc}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/sseg.xdc}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3, false); // B (D, cp)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_EXISTING_OR_CREATE_NEW_CONSTRAINTS, "Add"); // B (f, c)
+selectMenuItem(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files..."); // af (al, c)
+setFileChooser("C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnC.xdc");
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_EXISTING_OR_CREATE_NEW_CONSTRAINTS, "Add"); // B (f, c)
+selectMenuItem(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files..."); // af (al, c)
+setFileChooser("C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnD.xdc");
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc");
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc");
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc");
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc");
+selectButton(PAResourceAtoD.ConstraintsChooserPanel_ADD_FILES, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/switches.xdc");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 31 seconds
+dismissDialog("Add Sources"); // c (cp)
+// c (cp): Add Sources: addNotify
+// bV (c): Import Source Conflicts: addNotify
+selectButton(PAResourceQtoS.SrcConflictDialog_VIEW_CONFLICTS, "View Conflicts..."); // a (C, bV)
+// bX (bV): Import Conflicts: addNotify
+selectButton(PAResourceQtoS.SrcConflictDialog_OK, "OK"); // a (bX)
+dismissDialog("Import Conflicts"); // bX (bV)
+selectButton(PAResourceQtoS.SrcConflictDialog_YES, "Yes"); // a (bV)
+dismissDialog("Import Source Conflicts"); // bV (c)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset constrs_1 -norecurse {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnC.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnD.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/switches.xdc}} 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: import_files -fileset constrs_1 -force {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnC.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnD.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/switches.xdc}} 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 3); // B (D, cp)
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: [Fri Apr 10 11:46:35 2020] Launched synth_1... Run output will be captured here: C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/synth_1/runme.log [Fri Apr 10 11:46:35 2020] Launched impl_1... Run output will be captured here: C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (cp): Implementation Failed: addNotify
+// Elapsed time: 62 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 769 MB. GUI used memory: 63 MB. Current time: 4/10/20, 2:50:49 PM CDT
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 957 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 959 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 6385 ms. Increasing delay to 19155 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 16094 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1534 ms. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2384132 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 769 MB. GUI used memory: 61 MB. Current time: 4/10/20, 3:30:58 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  6563 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 19105 ms. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1873 ms.
+// Elapsed time: 13435 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, calc_lab10 (calc_lab10.sv)]", 1); // B (D, cp)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 64 ms. Decreasing delay to 2064 ms.
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, calc_lab10 (calc_lab10.sv), disp_unit : sseg4_TDM (sseg_4TDM.sv)]", 3); // B (D, cp)
+// Elapsed time: 67 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, calc_lab10 (calc_lab10.sv), disp_unit : sseg4_TDM (sseg_4TDM.sv), bcd11in : bcd11 (bcd11.sv)]", 4, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, calc_lab10 (calc_lab10.sv), disp_unit : sseg4_TDM (sseg_4TDM.sv), bcd11in : bcd11 (bcd11.sv)]", 4, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, calc_lab10 (calc_lab10.sv), disp_unit : sseg4_TDM (sseg_4TDM.sv), bcd11in : bcd11 (bcd11.sv), D9 : add3 (add3.sv)]", 8, false, false, false, false, false, true); // B (D, cp) - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1073 ms.
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton("BACK", "< Back"); // JButton (j, c)
+// 'h' command handler elapsed time: 14 seconds
+dismissDialog("Add Sources"); // c (cp)
+// Elapsed time: 32 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, calc_lab10 (calc_lab10.sv), disp_unit : sseg4_TDM (sseg_4TDM.sv), bcd11in : bcd11 (bcd11.sv)]", 4); // B (D, cp)
+// Elapsed time: 209 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Reset to Previous Step : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cp)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cp): Launch Runs: addNotify
+dismissDialog("Reset to Previous Step"); // bx (cp)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (cp)
+// bx (cp):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Apr 10 15:37:19 2020] Launched impl_1... Run output will be captured here: C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (cp)
+// TclEventType: RUN_FAILED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 653ms to process. Increasing delay to 3000 ms.
+// ah (cp): Implementation Failed: addNotify
+// Elapsed time: 108 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cp)
+// Elapsed time: 150 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Reset to Previous Step : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cp)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cp): Launch Runs: addNotify
+dismissDialog("Reset to Previous Step"); // bx (cp)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 10 seconds
+dismissDialog("Launch Runs"); // f (cp)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// bx (cp):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Apr 10 15:41:52 2020] Launched impl_1... Run output will be captured here: C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (cp)
+// Elapsed time: 22 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, calc_lab10 (calc_lab10.sv), disp_unit : sseg4_TDM (sseg_4TDM.sv)]", 3); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, calc_lab10 (calc_lab10.sv)]", 1); // B (D, cp)
+// TclEventType: RUN_FAILED
+// ah (cp): Implementation Failed: addNotify
+// Elapsed time: 273 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cp)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1066 ms. Increasing delay to 3198 ms.

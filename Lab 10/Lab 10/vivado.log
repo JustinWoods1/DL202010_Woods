@@ -37,3 +37,10 @@ launch_runs impl_1 -to_step write_bitstream -jobs 6
 Run output will be captured here: C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/synth_1/runme.log
 [Fri Apr 10 11:16:18 2020] Launched impl_1...
 Run output will be captured here: C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/impl_1/runme.log
+open_hw
+import_files -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnC.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnD.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/switches.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc}}
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Apr 10 11:39:07 2020] Launched impl_1...
+Run output will be captured here: C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/impl_1/runme.log
+close_hw

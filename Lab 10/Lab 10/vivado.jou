@@ -22,3 +22,9 @@ wait_on_run impl_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 6
 wait_on_run impl_1
+open_hw
+import_files -fileset constrs_1 {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnC.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnD.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/switches.xdc} {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc}}
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+close_hw

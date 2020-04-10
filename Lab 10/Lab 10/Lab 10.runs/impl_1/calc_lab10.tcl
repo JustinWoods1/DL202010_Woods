@@ -61,57 +61,12 @@ proc step_failed { step } {
 }
 
 
-start_step init_design
-set ACTIVE_STEP init_design
-set rc [catch {
-  create_msg_db init_design.pb
-  create_project -in_memory -part xc7k70tfbv676-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.xpr} [current_project]
-  set_property ip_output_repo {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.cache/ip}} [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/synth_1/calc_lab10.dcp}}
-  read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnC.xdc}}
-  read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnD.xdc}}
-  read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc}}
-  read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc}}
-  read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc}}
-  read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/switches.xdc}}
-  read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc}}
-  link_design -top calc_lab10 -part xc7k70tfbv676-1
-  close_msg_db -file init_design.pb
-} RESULT]
-if {$rc} {
-  step_failed init_design
-  return -code error $RESULT
-} else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force calc_lab10_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file calc_lab10_drc_opted.rpt -pb calc_lab10_drc_opted.pb -rpx calc_lab10_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
 start_step place_design
 set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
+  open_checkpoint calc_lab10_opt.dcp
+  set_property webtalk.parent_dir {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.cache/wt} [current_project]
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
     implement_debug_core 
   } 

@@ -102,44 +102,58 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/btnC.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/btnC.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/btnC.xdc"/>
+        <Attr Name="ImportTime" Val="1586400088"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/btnD.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/btnD.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/btnD.xdc"/>
+        <Attr Name="ImportTime" Val="1586400103"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/btnU.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/btnU.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/btnU.xdc"/>
+        <Attr Name="ImportTime" Val="1586400115"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/clock.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/clock.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/clock.xdc"/>
+        <Attr Name="ImportTime" Val="1586400127"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/led.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/led.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/led.xdc"/>
+        <Attr Name="ImportTime" Val="1586400145"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/switches.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/switches.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/switches.xdc"/>
+        <Attr Name="ImportTime" Val="1586400177"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/sseg.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/sseg.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/sseg.xdc"/>
+        <Attr Name="ImportTime" Val="1586444797"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>

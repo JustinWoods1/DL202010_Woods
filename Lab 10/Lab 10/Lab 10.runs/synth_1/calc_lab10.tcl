@@ -29,16 +29,16 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo {c:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/add3.sv
+  {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/add3.sv}
   {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 9/Lab9/Lab9.srcs/sources_1/new/alu.sv}
-  C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/an_decoder.sv
-  C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/bcd11.sv
+  {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/an_decoder.sv}
+  {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/bcd11.sv}
   {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/counter.sv}
-  C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/mux2.sv
-  C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/mux4.sv
+  {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/mux2.sv}
+  {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/mux4.sv}
   {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 9/Lab9/Lab9.srcs/sources_1/new/register.sv}
   {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg_4TDM.sv}
-  C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/sseg_decoder.sv
+  {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg_decoder.sv}
   {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 9/Lab9/Lab9.srcs/sources_1/new/top_lab9.sv}
   {C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/calc_lab10.sv}
 }

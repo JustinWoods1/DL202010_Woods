@@ -25,15 +25,6 @@ Finished Parsing XDC File [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/La
 Parsing XDC File [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc]
 Finished Parsing XDC File [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc]
 Parsing XDC File [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc:2]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc:2]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc:3]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc:4]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc:4]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
 Finished Parsing XDC File [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc]
 Parsing XDC File [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc]
 CRITICAL WARNING: [Common 17-69] Command failed: 'E19' is not a valid site or package pin name. [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc:4]
@@ -71,13 +62,13 @@ CRITICAL WARNING: [Common 17-69] Command failed: 'U8' is not a valid site or pac
 CRITICAL WARNING: [Common 17-69] Command failed: 'V5' is not a valid site or package pin name. [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc:12]
 Finished Parsing XDC File [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 559.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 570.129 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-7 Infos, 3 Warnings, 33 Critical Warnings and 0 Errors encountered.
+7 Infos, 0 Warnings, 30 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 563.023 ; gain = 311.215
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 574.328 ; gain = 321.973
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
@@ -88,53 +79,53 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.663 . Memory (MB): peak = 576.422 ; gain = 13.398
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.645 . Memory (MB): peak = 583.695 ; gain = 9.367
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1887848f9
+Ending Cache Timing Information Task | Checksum: 11b69da5f
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1126.793 ; gain = 550.371
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1138.355 ; gain = 554.660
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: daad6d0e
+Phase 1 Retarget | Checksum: f659c4fc
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: daad6d0e
+Phase 2 Constant propagation | Checksum: f659c4fc
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 15cf8aaef
+Phase 3 Sweep | Checksum: 159a7dc3b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 8 cells and removed 0 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 15cf8aaef
+Phase 4 BUFG optimization | Checksum: 159a7dc3b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 25452d080
+Phase 5 Shift Register Optimization | Checksum: 1cb72477d
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 195b276f7
+Phase 6 Post Processing Netlist | Checksum: 228793ee9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -155,39 +146,39 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1223.691 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 195b276f7
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1234.668 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 228793ee9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1234.668 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 195b276f7
+Ending Power Optimization Task | Checksum: 228793ee9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1234.668 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 195b276f7
+Ending Final Cleanup Task | Checksum: 228793ee9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1234.668 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1223.691 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 195b276f7
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1234.668 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 228793ee9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-23 Infos, 3 Warnings, 33 Critical Warnings and 0 Errors encountered.
+23 Infos, 0 Warnings, 30 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1223.691 ; gain = 660.668
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1223.691 ; gain = 0.000
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1234.668 ; gain = 660.340
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1223.691 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1223.691 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1234.668 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1234.668 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.runs/impl_1/calc_lab10_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file calc_lab10_drc_opted.rpt -pb calc_lab10_drc_opted.pb -rpx calc_lab10_drc_opted.rpx
 Command: report_drc -file calc_lab10_drc_opted.rpt -pb calc_lab10_drc_opted.pb -rpx calc_lab10_drc_opted.rpx
@@ -210,13 +201,15 @@ dp and seg[3]
 ERROR: [DRC BIVB-1] Bank IO standard Support: Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  
 an[3:0], led[9], led[10], seg[1], seg[4] and seg[6]
 ERROR: [DRC BIVB-1] Bank IO standard Support: Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  
+clk
+ERROR: [DRC BIVB-1] Bank IO standard Support: Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  
 sw[8] and sw[13]
-INFO: [Vivado_Tcl 4-198] DRC finished with 3 Errors
+INFO: [Vivado_Tcl 4-198] DRC finished with 4 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
 INFO: [Common 17-83] Releasing license: Implementation
-39 Infos, 3 Warnings, 33 Critical Warnings and 4 Errors encountered.
+39 Infos, 0 Warnings, 30 Critical Warnings and 5 Errors encountered.
 place_design failed
 ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
 
-INFO: [Common 17-206] Exiting Vivado at Thu Apr  9 11:45:15 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 10 11:17:18 2020...

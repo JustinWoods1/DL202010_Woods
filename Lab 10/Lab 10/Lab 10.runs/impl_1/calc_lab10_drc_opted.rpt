@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Apr  9 11:45:14 2020
+| Date         : Fri Apr 10 11:17:17 2020
 | Host         : DESKTOP-3R8VEF6 running 64-bit major release  (build 9200)
 | Command      : report_drc -file calc_lab10_drc_opted.rpt -pb calc_lab10_drc_opted.pb -rpx calc_lab10_drc_opted.rpx
 | Design       : calc_lab10
@@ -28,9 +28,8 @@ Table of Contents
 +-------------+------------------+-------------------------------------------------------------+------------+
 | Rule        | Severity         | Description                                                 | Violations |
 +-------------+------------------+-------------------------------------------------------------+------------+
-| BIVB-1      | Error            | Bank IO standard Support                                    | 3          |
-| PLCK-87     | Error            | Clock Placer Checks                                         | 1          |
-| NSTD-1      | Critical Warning | Unspecified I/O Standard                                    | 1          |
+| BIVB-1      | Error            | Bank IO standard Support                                    | 4          |
+| PLCK-12     | Error            | Clock Placer Checks                                         | 1          |
 | UCIO-1      | Critical Warning | Unconstrained Logical Port                                  | 1          |
 | CFGBVS-1    | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
 | PLHOLDVIO-2 | Warning          | Non-Optimal connections which could lead to hold violations | 1          |
@@ -54,23 +53,30 @@ Related violations: <none>
 BIVB-1#3 Error
 Bank IO standard Support  - IOBank:34
 Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  
+clk
+Related violations: <none>
+
+BIVB-1#4 Error
+Bank IO standard Support  - IOBank:34
+Bank 34 has incompatible IO(s) because: The LVCMOS33 I/O standard is not supported for banks of type High Performance.  Move the following ports or change their properties:  
 sw[8] and sw[13]
 Related violations: <none>
 
-PLCK-87#1 Error
+PLCK-12#1 Error
 Clock Placer Checks  
-IO/clock placer failed to collectively place all IOs and clock instances. This is likely due to design requirements or user constraints specified in the constraint file such as IO standards, bank/voltage/DCI/VREF specifications, together with the part and package being used for the implementation. Please check the above for any possible conflicts.
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .xdc file to demote this message to a WARNING. However, the use of this override is highly discouraged. These examples can be used directly in the .xdc file to override this clock rule.
+	< set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_IBUF] >
 
-Related violations: <none>
+	clk_IBUF_inst (IBUF.O) is locked to W5
+	clk_IBUF_BUFG_inst (BUFG.I) cannot be placed
 
-NSTD-1#1 Critical Warning
-Unspecified I/O Standard  
-1 out of 46 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: clock.
 Related violations: <none>
 
 UCIO-1#1 Critical Warning
 Unconstrained Logical Port  
-29 out of 46 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: led[15], led[14], led[13], led[12], led[11], led[8], led[7], led[6], led[5], led[4], led[3], led[1], seg[5], seg[2], seg[0] (the first 15 of 29 listed).
+28 out of 46 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: led[15], led[14], led[13], led[12], led[11], led[8], led[7], led[6], led[5], led[4], led[3], led[1], seg[5], seg[2], seg[0] (the first 15 of 28 listed).
 Related violations: <none>
 
 CFGBVS-1#1 Warning

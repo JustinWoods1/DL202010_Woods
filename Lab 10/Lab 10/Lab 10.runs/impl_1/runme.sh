@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .place_design.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log calc_lab10.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source calc_lab10.tcl -notrace
 
 

@@ -190,18 +190,18 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/constrs_1/imports/Lab 10/switches.xdc">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/switches.xdc"/>
-          <Attr Name="ImportTime" Val="1586400177"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/constrs_1/imports/Lab 10/sseg.xdc">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/sseg.xdc"/>
           <Attr Name="ImportTime" Val="1586444797"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/constrs_1/imports/Lab 10/switches.xdc">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/switches.xdc"/>
+          <Attr Name="ImportTime" Val="1586400177"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>

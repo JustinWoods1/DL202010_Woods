@@ -50,26 +50,26 @@ read_verilog -library xil_defaultlib -sv {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnC.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnC.xdc}}]
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnC.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnC.xdc}}]
 
-read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnD.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnD.xdc}}]
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnD.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnD.xdc}}]
 
-read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/btnU.xdc}}]
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnU.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/btnU.xdc}}]
 
-read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/clock.xdc}}]
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/clock.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/clock.xdc}}]
 
-read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/led.xdc}}]
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/led.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/led.xdc}}]
 
-read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/switches.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/switches.xdc}}]
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/sseg.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/sseg.xdc}}]
 
-read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/sseg.xdc}}]
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/switches.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/constrs_1/imports/Lab 10/switches.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

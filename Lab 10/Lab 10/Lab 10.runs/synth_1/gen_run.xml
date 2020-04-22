@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1586561546">
   <File Type="PA-TCL" Name="calc_lab10.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="calc_lab10_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="calc_lab10_reports.tcl"/>
   <File Type="RDS-RDS" Name="calc_lab10.vds"/>
-  <File Type="RDS-UTIL" Name="calc_lab10_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="calc_lab10_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="calc_lab10.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="calc_lab10_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="calc_lab10_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/add3.sv">

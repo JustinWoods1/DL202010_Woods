@@ -2,13 +2,13 @@
 2018.3
 Dec  7 2018
 00:33:28
-C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/add3.sv,1585073107,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/an_decoder.sv,,add3,,,,,,,,
-C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/an_decoder.sv,1585093535,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/bcd11.sv,,an_decoder,,,,,,,,
-C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/bcd11.sv,1585188068,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/counter.sv,,bcd11,,,,,,,,
-C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/mux2.sv,1585090520,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/mux4.sv,,mux2,,,,,,,,
-C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/mux4.sv,1585089567,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg_4TDM.sv,,mux4,,,,,,,,
-C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/sseg_decoder.sv,1585104457,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sim_2/new/sseg4_TDMTEST.sv,,sseg_decoder,,,,,,,,
 C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.sim/sim_2/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sim_2/new/sseg4_TDMTEST.sv,1586443838,systemVerilog,,,,sseg4_TDMTEST,,,,,,,,
-C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/counter.sv,1586372406,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/mux2.sv,,counter,,,,,,,,
-C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg_4TDM.sv,1586378432,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/sseg_decoder.sv,,sseg4_TDM,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sim_2/new/sseg4_TDMTEST.sv,1586992922,systemVerilog,,,,sseg4_TDMTEST,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/add3.sv,1585073107,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/an_decoder.sv,,add3,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/an_decoder.sv,1585093535,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/bcd11.sv,,an_decoder,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/bcd11.sv,1585188068,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/counter.sv,,bcd11,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/counter.sv,1586372406,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/mux2.sv,,counter,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/mux2.sv,1585090520,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/mux4.sv,,mux2,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/mux4.sv,1585089567,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg_4TDM.sv,,mux4,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg_4TDM.sv,1586920859,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg_decoder.sv,,sseg4_TDM,,,,,,,,
+C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg_decoder.sv,1585104457,systemVerilog,,C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 10/Lab 10/Lab 10.srcs/sim_2/new/sseg4_TDMTEST.sv,,sseg_decoder,,,,,,,,

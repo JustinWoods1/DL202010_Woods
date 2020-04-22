@@ -53,7 +53,7 @@ module sseg4_TDM(
         );
         
     counter #(.N(2)) counter2(
-        .en(1'b1), .clk(timer2counter), .rst(reset),
+        .en(timer2counter), .clk(clock), .rst(reset),
         .count(digit_sel), .tick()
         );
       

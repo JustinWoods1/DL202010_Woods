@@ -107,13 +107,15 @@ In this lab, we used synchronous design methodology to design a calculator. This
 \begin{figure}[ht]\centering
 	
 	\begin{tabular}{l|rrrrrrrrrr}
-		Time (ms): & 0-1 & 1-2 & 2-3 & 3-4 & 4-5 & 5-6 & 6-7 & 7-8 & 8-9 & 9-10\\
+		Time (ms): & 0-2 & 2-4 & 4-6 & 6-8 & 8-10 & 10-12 & 12-14 & 14-16 & 16-18 & 18-20\\
 		\midrule
-		data  & 1 & 2 & 3      & 4 & 5 & 	  6 & 7 & 	   8 & 9 & 10 \\
-		sign  & 0 & 0 & 0      & 0 & 0 &   	  0 & 0 & 	   0 & 0 & 0 \\
-		hexDec & 1& 1 & 1      & 1 & 1 &      1 & 1 &      1 & 1 & 1 \\ 
+		data  & 41 & 82 & 103      & 204 & 41 & 	  82 & 103 & 	   204 & 41 & 82 \\
+		sign  & 0 & 0 & 0      & 0 & 0 &   	  0 & 0 & 	   0 & 1 & 1 \\
+		hexDec & 0& 0 & 0      & 0 & 1 &      1 & 1 &      1 & 1 & 1 \\ 
 		\midrule
-		an    & e & e & e$to$d & d & d & d$to$b & b & b$to$7 & 7 & 7 \\
+		seg   & 79 & 24$to$0 & 40$to$79 & 79$to$24 & 40 & 40 & 10$to$12 & 79 & 40 & 3f \\
+		an    & e  & e$to$d & d$to$b & b$to$7 & 7 & 7$to$e & e$to$d & d$to$b & b & b$to$7 \\
+		dp    & 1  & 1      & 1      & 1      & 1 &      1 & 1      & 1      & 1 & 1      \\ 
 		\bottomrule
 	\end{tabular}
 	\bigskip
@@ -123,7 +125,7 @@ In this lab, we used synchronous design methodology to design a calculator. This
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\includegraphics[width=0.65\textwidth,angle=90,origin=c]{sseg4tdmdiagram}
+	\includegraphics[width=1\textwidth,trim =0 200 0 0,clip, angle=0,origin=c]{sseg4tdmdiagram}
 	\caption{sseg4tdm Schematic}
 	\label{fig:sim_with_table}
 \end{figure}
@@ -305,22 +307,21 @@ label=MUX4 Test
 			reset = 1; #5;
 		
 			// reset
+			reset = 0; sign = 0; hex_dec = 0; 
+			data = 16'b0000000001000001; #2000000;
+			data = 16'b0000000010000010; #2000000;
+			data = 16'b0000000100000011; #2000000;
+			data = 16'b0000001000000100; #2000000;
 			reset = 0; sign = 0; hex_dec = 1; 
-			data = 16'b0000000000000001; #1000000;
-			data = 16'b0000000000000010; #1000000;
-			data = 16'b0000000000000011; #1000000;
-			data = 16'b0000000000000100; #1000000;
-			data = 16'b0000000000000101; #1000000;
-			data = 16'b0000000000000110; #1000000;
-			data = 16'b0000000000000111; #1000000;
-			data = 16'b0000000000001000; #1000000;
-			data = 16'b0000000000001001; #1000000;
-			data = 16'b0000000000001010; #1000000;
-			data = 16'b0000000000001011; #1000000;
-			data = 16'b0000000000001100; #1000000;
-			data = 16'b0000000000001101; #1000000;
-			data = 16'b0000000000001110; #1000000;
-			data = 16'b0000000000001111; #1000000;
+			data = 16'b0000000001000001; #2000000;
+			data = 16'b0000000010000010; #2000000;
+			data = 16'b0000000100000011; #2000000;
+			data = 16'b0000001000000100; #2000000;
+			reset = 0; sign = 1; hex_dec = 1; 
+			data = 16'b0000000001000001; #2000000;
+			data = 16'b0000000010000010; #2000000;
+			data = 16'b0000000100000011; #2000000;
+			data = 16'b0000001000000100; #2000000;
 			
 			$finish;
 		end 

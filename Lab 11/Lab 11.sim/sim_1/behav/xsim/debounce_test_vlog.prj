@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../Lab 11.srcs/sources_1/new/debounce.sv" \
+"../../../../Lab 11.srcs/sim_1/new/debounceTEST.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

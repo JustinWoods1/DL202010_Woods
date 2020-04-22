@@ -1,13 +1,13 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
-"../../../../../../../DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/add3.sv" \
-"../../../../../../../DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/an_decoder.sv" \
-"../../../../../../../DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/bcd11.sv" \
+"../../../../Lab 10.srcs/sources_1/new/add3.sv" \
+"../../../../Lab 10.srcs/sources_1/new/an_decoder.sv" \
+"../../../../Lab 10.srcs/sources_1/new/bcd11.sv" \
 "../../../../Lab 10.srcs/sources_1/new/counter.sv" \
-"../../../../../../../DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/mux2.sv" \
-"../../../../../../../DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/mux4.sv" \
+"../../../../Lab 10.srcs/sources_1/new/mux2.sv" \
+"../../../../Lab 10.srcs/sources_1/new/mux4.sv" \
 "../../../../Lab 10.srcs/sources_1/new/sseg_4TDM.sv" \
-"../../../../../../../DL202010_MMWJ/Lab8/Lab8.srcs/sources_1/new/sseg_decoder.sv" \
+"../../../../Lab 10.srcs/sources_1/new/sseg_decoder.sv" \
 "../../../../Lab 10.srcs/sim_2/new/sseg4_TDMTEST.sv" \
 
 # compile glbl module

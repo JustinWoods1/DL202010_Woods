@@ -3,16 +3,18 @@
 
 module guess_FSM  #( parameter N = 21)
     (input clk , reset ,
-     input   in ,
-     output  reg out ,
+     input  [3:0] b,
+     output  reg win, lose , [3:0]y,
      output  reg  tick);
      
     //  define  states  as local  parameters (constants)
-    localparam  [1:0]
-        zero    = 2'b00 ,
-        wait1   = 2'b01 ,
-        one     = 2'b11 ,
-        wait0   = 2'b10;
+    localparam  [2:0]
+        s0    = 3'b000,
+        s1    = 2'b001,
+        s2    = 2'b010,
+        s3    = 2'b011,
+        swin =  3'b100,
+        slose = 3'b101;
         
     //  internal  signals
     reg  [1:0]  state , state_next;
@@ -21,7 +23,7 @@ module guess_FSM  #( parameter N = 21)
     // state  memory (register)
     always_ff @(posedge  clk or  posedge reset)
         if (reset) begin
-            state    <= zero;
+            state    <= s0;
             counter  <= {N{1'b1}};
         end
         else  begin
@@ -37,39 +39,75 @@ module guess_FSM  #( parameter N = 21)
         tick = 0;
         
         case(state)
-            zero: begin
-                out = 0;
+            s0: begin
+                y[0] = 1;                   //Light
                 counter_next = {N{1'b1}};
-                if (in)
-                state_next = wait1;
+                
+                if (b[3] && b[2] && b[1] && !b[0]) //Correct button
+                    state_next = swin;
+                else if (!b[3] || !b[2] || !b[1]) //Incorrect button
+                    state_next = slose;
+                else if (b[3] && b[2] && b[1] && b[0]) //No button
+                    state_next = s1;
             end
             
-        wait1: begin
-            out = 0;      //  Moore  output
-            counter_next = counter  - 1;
-            if (counter  == 0) begin
-                tick = 1'b1; // Mealy output
-                state_next = one;
-            end
-            else if (~in)
-                state_next = zero;
+            s1: begin
+                y[1] = 1;                   //Light
+                counter_next = {N{1'b1}};
+                //counter_next = counter  - 1;
+               // if (counter  == 0) begin
+                 //   tick = 1'b1; // Mealy output
+                   // state_next = s2;
+                //end
+                
+                if (b[3] && b[2] && !b[1] && b[0]) //Correct button
+                    state_next = swin;
+                else if (!b[3] || !b[2] || !b[0]) //Incorrect button
+                    state_next = slose;
+                else if (b[3] && b[2] && b[1] && b[0]) //No button
+                    state_next = s2;
             end
             
-        one: begin
-            out = 1;
-            counter_next = {N{1'b1}};
-            if (~in)
-                state_next    = wait0;
-        end
+            s2: begin
+                 y[2] = 1;                  //Light
+                 counter_next = {N{1'b1}};
+                 
+                 if (b[3] && !b[2] && b[1] && b[0]) //Correct button
+                     state_next = swin;
+                 else if (!b[3] || !b[1] || !b[0]) //Incorrect button
+                     state_next = slose;
+                 else if (b[3] && b[2] && b[1] && b[0]) //No button
+                     state_next = s3;
+            end
         
-        wait0: begin
-            out = 1;
-            counter_next = counter  - 1;
-            if (counter  == 0)
-                state_next = zero;
-            else if (in)
-                state_next = one;
+            s3: begin
+                y[3] = 1;
+                counter_next = {N{1'b1}};
+                
+                if (!b[3] && b[2] && b[1] && !b[0]) //Correct button
+                    state_next = swin;
+                else if (!b[2] || !b[1] || !b[0]) //Incorrect button
+                    state_next = slose;
+                else if (b[3] && b[2] && b[1] && b[0]) //No button
+                    state_next = s0;
             end
+            
+            swin: begin
+                win = 1;
+                if (b[3] && b[2] && b[1] && b[0]) //No button
+                    state_next = s0;
+                else if (!b[3] || !b[2] || !b[1] || !b[0]) //Any button
+                    state_next = swin;
+            end
+            
+            slose: begin
+            lose = 1;
+                if (b[3] && b[2] && b[1] && b[0]) //No button
+                    state_next = s0;
+                else if (!b[3] || !b[2] || !b[1] || !b[0]) //Any button
+                    state_next = slose;
+            end
+            
         endcase
     end
 endmodule

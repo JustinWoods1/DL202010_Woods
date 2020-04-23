@@ -8,7 +8,7 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.debounce
-Compiling module xil_defaultlib.counter(N=4)
+Compiling module xil_defaultlib.counter(N=23)
 Compiling module xil_defaultlib.mux2(N=1)
 Compiling module xil_defaultlib.guess_FSM(N=3)
 Compiling module xil_defaultlib.guessing_game

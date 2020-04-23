@@ -85,53 +85,83 @@ showspaces=false,                        % don't underscore spaces
 \section*{Results}
 
 \begin{figure}[ht]\centering
-	
-	\begin{tabular}{l|rrrrrrrrrrrr}	
-		Time (ns): & 0-5 & 5-10 & 10-15 & 15-20 & 20-25 & 25-30 & 30-35 & 35-40 & 40-45 & 45-50 & 50-55 & 55-60 \\
+	\begin{tabular}{l|rrrrrrrr}	
+		Time (ns): & 0-100 & 100-200 & 200-300 & 300-400 & 400-500 & 500-600 & 600-700 & 700 -800 \\
 		\midrule
-		clk     & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1\\
-		en  	& 0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 1\\
-		rst 	& 0 & 1 & 0 & 0 & 0	& 0 & 0 & 0 & 0	& 0 & 0 & 0\\
+		clk     & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 \\
+		in  	& 0-1 & 0-1 & 1   & 1   & 1-0 & 1-0 & 0   & 0 \\
+		rst 	& 0-1 & 1   & 0   & 0   & 0	  & 0   & 0   & 0 \\
 		\midrule
-		count 	& X & 0 & 0 & 1 & 1 & 2 & 2	& 2 & 2 & 3 & 3 & 0 \\
-		tick	& X & 0 & 0 & 0 & 0 & 0 & 0	& 0 & 0 & 1 & 1 & 0 \\
+		out 	& X-0 & 0   & 0-1 & 1   & 1   & 1   & 1-0 & 0 \\
+		tick	& 0   & 0   & 0-1 & 0   & 0   & 0   & 0	  & 0 \\
 		\bottomrule
 	\end{tabular}
 	\bigskip
-	\includegraphics[width=1\textwidth,angle=0,origin=c]{}
-	\caption{}
+	\includegraphics[width=1\textwidth,angle=0,origin=c]{bounce2Waveform}
+	\caption{Debounce Waveform with ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	
-	\begin{tabular}{l|rrrrrrrrrr}
-		Time (ms): & 0-2 & 2-4 & 4-6 & 6-8 & 8-10 & 10-12 & 12-14 & 14-16 & 16-18 & 18-20\\
+	\begin{tabular}{l|rrrrrrrrr}	
+		Time (ns): & 0-10 & 10-20 & 20-30 & 30-40 & 40-50 & 50-60 & 60-70 & 70-80 & 80-90\\
 		\midrule
-		data  & 41 & 82 & 103      & 204 & 41 & 	  82 & 103 & 	   204 & 41 & 82 \\
-		sign  & 0 & 0 & 0      & 0 & 0 &   	  0 & 0 & 	   0 & 1 & 1 \\
-		hexDec & 0& 0 & 0      & 0 & 1 &      1 & 1 &      1 & 1 & 1 \\ 
+		clk     & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 & 0-1 \\
+		rst 	& 0   & 1-0 & 0   & 0   & 0	  & 0   & 0   & 0   & 0 \\
 		\midrule
-		seg   & 79 & 24$to$0 & 40$to$79 & 79$to$24 & 40 & 40 & 10$to$12 & 79 & 40 & 3f \\
-		an    & e  & e$to$d & d$to$b & b$to$7 & 7 & 7$to$e & e$to$d & d$to$b & b & b$to$7 \\
-		dp    & 1  & 1      & 1      & 1      & 1 &      1 & 1      & 1      & 1 & 1      \\ 
+		b 		& 0   & 0   & 4   & 0   & 1   & 0   & 0	  & 0   & 0 \\
+		win		& 0   & 0   & 0   & 0   & 0-1 & 1-0 & 0   & 0   & 0 \\
+		lose 	& 0   & 0   & 0-1 & 1-0 & 0   & 0   & 0   & 0   & 0 \\
+		y 		& f   & e-d & d-f & f-e & e-f & f-e & e-d & d-b & b-7 \\
 		\bottomrule
 	\end{tabular}
 	\bigskip
-	\includegraphics[width=1\textwidth,angle=0,origin=c]{}
-	\caption{}
+	\includegraphics[width=1\textwidth,angle=0,origin=c]{guessFSMwaveform}
+	\caption{GuessFSM Waveform with ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\includegraphics[width=1\textwidth,trim =0 0 0 0,clip, angle=0,origin=c]{}
-	\caption{}
+	\begin{tabular}{l|rrrrrrrr}
+		Time (ms): & 0-100 & 100-200 & 200-300 & 300-400 & 400-500 & 500-600 & 600-700 & 700 -800 \\
+		\midrule
+		btnC & 0-1 & 0   & 0      & 0   & 0-1 & 0   & 0      & 0    \\
+		btnU & 0   & 1-0 & 0      & 0   & 0   & 1-0 & 0      & 0    \\ 
+		btnL & 0-1 & 0   & 0      & 0   & 0-1 & 0   & 0      & 0    \\ 
+		btnR & 0   & 0   & 0-1    & 0   & 0   & 0   & 0-1    & 0     \\ 
+		btnD & 0   & 0   & 0      & 0-1 & 0   & 0   & 0      & 0-1   \\ 
+		sw
+		\midrule
+		seg   & 7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+		an    & b& e  & e&e& e  & e&e& e \\
+		led    & 0000  & 0000-8000   & 8000   & 8000   & 0000-4000 &   0-8000 &0000-8000   & 0000-8000  \\ 
+		\bottomrule
+	\end{tabular}
+	\bigskip
+	\includegraphics[width=1\textwidth,angle=0,origin=c]{guessinggameWaveform}
+	\caption{GuessingGame Waveform with ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\includegraphics[width=1\textwidth,trim =0 0 0 0,clip,angle=0,origin=c]{}
-	\caption{}
+	\includegraphics[width=1\textwidth,trim =0 0 0 0,clip,angle=90,origin=c]{slowgameRun}
+	\caption{Slow Game Run}
+	\label{fig:sim_with_table}
+\end{figure}
+\begin{figure}[ht]\centering
+	\includegraphics[width=1\textwidth,trim =0 0 0 0,clip, angle=90,origin=c]{slowgameG}
+	\caption{Slow Game Guess}
+	\label{fig:sim_with_table}
+\end{figure}
+\begin{figure}[ht]\centering
+	\includegraphics[width=1\textwidth,trim =0 0 0 0,clip, angle=90,origin=c]{fastGamerun}
+	\caption{Fast Game Run}
+	\label{fig:sim_with_table}
+\end{figure}
+
+\begin{figure}[ht]\centering
+	\includegraphics[width=1\textwidth,trim =0 0 0 0,clip,angle=90,origin=c]{fastgameGuess}
+	\caption{Fast Game Guess}
 	\label{fig:sim_with_table}
 \end{figure}
 
@@ -142,6 +172,102 @@ showspaces=false,                        % don't underscore spaces
 caption=guessFSM,
 label=MUX w/ two inputs Source Code
 ]
+module guess_FSM  #( parameter N = 21)
+	(input clk , reset ,
+	input  [3:0] b,
+	output  reg win, lose, [3:0]y,
+	output  reg  tick);
+	
+	//  define  states  as local  parameters (constants)
+	localparam  [2:0]
+		s0    = 3'b000,
+		s1    = 2'b001,
+		s2    = 2'b010,
+		s3    = 2'b011,
+		swin =  3'b100,
+		slose = 3'b101;
+	
+	//  internal  signals
+	reg  [2:0]  state , state_next;
+	
+	// state  memory (register)
+	always_ff @(posedge  clk or  posedge reset)
+		if (reset) begin
+			state    <= s0;
+		end
+		else  begin
+			state    <= state_next;
+		end
+	
+	//  combined  next -state  and  output logic
+	always_comb  begin
+		//  default  behavior
+		state_next    = state;
+		tick = 0;
+		win = 0;
+		lose = 0;
+		y = 4'b1111;
+		
+		case(state)
+			s0: begin
+				y[0] = 0;                   //Light
+				if (!b[3] && !b[2] && !b[1] && b[0]) //Correct button
+					state_next = swin;
+				else if (b[3] || b[2] || b[1]) //Incorrect button
+					state_next = slose;
+				else if (!b[3] && !b[2] && !b[1] && !b[0]) //No button
+					state_next = s1;
+			end
+			
+			s1: begin
+				y[1] = 0;                   //Light
+				if (!b[3] && !b[2] && b[1] && !b[0]) //Correct button
+					state_next = swin;
+				else if (b[3] || b[2] || b[0]) //Incorrect button
+					state_next = slose;
+				else if (!b[3] && !b[2] && !b[1] && !b[0]) //No button
+					state_next = s2;
+			end
+			
+			s2: begin
+				y[2] = 0;                  //Light
+				if (!b[3] && b[2] && !b[1] && !b[0]) //Correct button
+					state_next = swin;
+				else if (b[3] || b[1] || b[0]) //Incorrect button
+					state_next = slose;
+				else if (!b[3] && !b[2] && !b[1] && !b[0]) //No button
+					state_next = s3;
+			end
+			
+			s3: begin
+				y[3] = 0;
+				if (b[3] && !b[2] && !b[1] && !b[0]) //Correct button
+					state_next = swin;
+				else if (b[2] || b[1] || b[0]) //Incorrect button
+					state_next = slose;
+				else if (!b[3] && !b[2] && !b[1] && !b[0]) //No button
+					state_next = s0;
+			end
+			
+			swin: begin
+				win = 1;
+				if (!b[3] && !b[2] && !b[1] && !b[0]) //No button
+					state_next = s0;
+				else if (b[3] || b[2] || b[1] || b[0]) //Any button
+					state_next = swin;
+			end
+			
+			slose: begin
+				lose = 1;
+				if (!b[3] && !b[2] && !b[1] && !b[0]) //No button
+					state_next = s0;
+				else if (b[3] || b[2] || b[1] || b[0]) //Any button
+					state_next = slose;
+			end
+			
+		endcase
+	end
+endmodule
 	
 \end{lstlisting}
 \clearpage
@@ -150,31 +276,132 @@ label=MUX w/ two inputs Source Code
 caption=guessFSM Test,
 label=MUX2 Test
 ]
+module guess_FSMTEST();
+	
+	reg clk , reset;
+	reg [3:0]b;
+	wire win, lose, tick;
+	wire [3:0]y;
+	
+	guess_FSM  #(.N(3)) gfms (.clk(clk),
+		.reset(reset), .b(b), .win(win), .lose(lose),
+		.y(y), .tick(tick));
+	
+	always  begin
+		#5 clk = ~clk;
+	end
+	
+	initial  begin
+		clk =0; reset = 0; b = 4'b0000; #10;
+		reset = 1; #5;
+		reset = 0; #5;
+	
+		b[2] = 1; #10; b[2] = 0; #10;
+		b[0] = 1; #10; b[0] = 0; #10;
+	
+		$finish;
+	end
+endmodule  
 	
 \end{lstlisting}
 
 \begin{lstlisting}[style=Verilog,
-caption= Sseg4TDM Source Code,
+caption= guessinggame Source Code,
 label=MUX w/ four inputs Source Code
 ]
+module guessing_game
+	(input clk, btnC, btnU, btnL, btnR, btnD,
+	 input [15:0]sw,
+	 output [6:0]seg, [3:0]an, [15:0]led
+	);
+	
+	wire [3:0] dataForGuess;
+	wire userTime, toMux, winout, loseout;
+	
+	debounce  #(.N(21)) d1 (.clk(clk),
+		.reset(btnC), .in(btnU), .out(dataForGuess[0]),
+		.tick());
+	
+	debounce  #(.N(21)) d2 (.clk(clk),
+		.reset(btnC), .in(btnL), .out(dataForGuess[1]),
+		.tick());
+	
+	debounce  #(.N(21)) d3 (.clk(clk),
+		.reset(btnC), .in(btnR), .out(dataForGuess[2]),
+		.tick());
+	
+	debounce  #(.N(21)) d4 (.clk(clk),
+		.reset(btnC), .in(btnD), .out(dataForGuess[3]),
+		.tick());
+	
+	counter #(.N(23)) count (.clk(clk),
+		.rst(btnC), .en(1'b1), .count(), .tick(toMux));
+	
+	mux2 #(.N(1)) m1 (.in1(toMux), .in0(clk),
+		.sel(sw[0]), .out(userTime));
+	
+	guess_FSM  #(.N(3)) gfms (.clk(userTime),
+		.reset(btnC), .b(dataForGuess), .win(winout), .lose(loseout),
+		.y(seg[3:0]), .tick());
+	
+	assign an[3:0] = 4'b1110;
+	assign seg[6:4] = 3'b111;
+	assign led[13:0] = 0;
+	assign led[14] = winout;
+	assign led[15] = loseout;
 
+endmodule
 	
 \end{lstlisting}
 \clearpage
 \begin{lstlisting}[style=Verilog,
-caption=Sseg4TDM Test,
+caption=guessinggame Test,
 label=MUX4 Test
-]
+]	
+module guessing_gameTEST();
 	
-\end{lstlisting}
-\clearpage
-\begin{lstlisting}[style=Verilog,
-caption=CalcLab10,
-label=MUX2 Test
-]
+	reg clk, btnC, btnU, btnL, btnR, btnD;
+	reg [15:0]sw;
+	wire [6:0]seg;
+	wire [3:0]an;
+	wire [15:0]led;
 	
-
+	guessing_game gg (.clk(clk), .sw(sw), 
+		.btnC(btnC), .btnU(btnU), .btnL(btnL),
+		.btnR(btnR), .btnD(btnD), .seg(seg), 
+		.an(an), .led(led));
+	
+	always  begin
+		#5 clk = ~clk;
+	end
+	
+	
+	initial  begin
+		clk = 0; 
+		sw = 1;
+		btnC = 0; btnU = 0; btnL = 0; btnR = 0; btnD = 0;
+		#10;
+	
+		btnC = 1; #5000000;
+		btnC = 0; #5000000;
+		
+		btnL = 1; #50000000 btnL = 0; #50000000;
+		btnU = 1; #50000000 btnU = 0; #50000000;
+		btnR = 1; #50000000 btnR = 0; #50000000;
+		btnD = 1; #50000000 btnD = 0; #50000000;
+		
+		sw = 0;
+		btnC = 1; #500000;
+		btnC = 0; #500000;
+		
+		btnL = 1; #50000000 btnL = 0; #50000000;
+		btnU = 1; #50000000 btnU = 0; #50000000;
+		btnR = 1; #50000000 btnR = 0; #50000000;
+		btnD = 1; #50000000 btnD = 0; #50000000;
+	
+		$finish;
+	end     
+endmodule
 \end{lstlisting}
-
 
 \end{document}

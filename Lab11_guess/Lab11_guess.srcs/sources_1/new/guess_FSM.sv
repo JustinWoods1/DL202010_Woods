@@ -35,11 +35,11 @@ module guess_FSM  #( parameter N = 21)
         tick = 0;
         win = 0;
         lose = 0;
-        y = 4'b0000;
+        y = 4'b1111;
         
         case(state)
             s0: begin
-                y[0] = 1;                   //Light
+                y[0] = 0;                   //Light
                                 
                 if (!b[3] && !b[2] && !b[1] && b[0]) //Correct button
                     state_next = swin;
@@ -50,7 +50,7 @@ module guess_FSM  #( parameter N = 21)
             end
             
             s1: begin
-                y[1] = 1;                   //Light
+                y[1] = 0;                   //Light
                 
                 if (!b[3] && !b[2] && b[1] && !b[0]) //Correct button
                     state_next = swin;
@@ -61,7 +61,7 @@ module guess_FSM  #( parameter N = 21)
             end
             
             s2: begin
-                 y[2] = 1;                  //Light
+                 y[2] = 0;                  //Light
                                   
                  if (!b[3] && b[2] && !b[1] && !b[0]) //Correct button
                      state_next = swin;
@@ -72,7 +72,7 @@ module guess_FSM  #( parameter N = 21)
             end
         
             s3: begin
-                y[3] = 1;
+                y[3] = 0;
                                 
                 if (b[3] && !b[2] && !b[1] && !b[0]) //Correct button
                     state_next = swin;

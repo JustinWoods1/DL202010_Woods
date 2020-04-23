@@ -3,7 +3,8 @@
 
 module guessing_gameTEST();
 
-    reg clk, sw, btnC, btnU, btnL, btnR, btnD;
+    reg clk, btnC, btnU, btnL, btnR, btnD;
+    reg [15:0]sw;
     wire [6:0]seg;
     wire [3:0]an;
     wire [15:0]led;
@@ -25,23 +26,23 @@ module guessing_gameTEST();
        btnC = 0; btnU = 0; btnL = 0; btnR = 0; btnD = 0;
        #10;
        
-       btnC = 1; #500000;
-       btnC = 0; #500000;
+       btnC = 1; #5000000;
+       btnC = 0; #5000000;
        
-     btnL = 1; #50000000 btnL = 0; #50000000;
-     btnL = 1; #50000000 btnL = 0; #50000000;
-     btnL = 1; #50000000 btnL = 0; #50000000;
-     btnL = 1; #50000000 btnL = 0; #50000000;
+       btnL = 1; #50000000 btnL = 0; #50000000;
+       btnU = 1; #50000000 btnU = 0; #50000000;
+       btnR = 1; #50000000 btnR = 0; #50000000;
+       btnD = 1; #50000000 btnD = 0; #50000000;
      
 
        sw = 0;
-       btnC = 1; #5;
-       btnC = 0; #25;
+       btnC = 1; #500000;
+       btnC = 0; #500000;
        
-       btnL = 1; #5000000 btnL = 0; #5000000;
-       btnL = 1; #5000000 btnL = 0; #5000000;
-       btnL = 1; #5000000 btnL = 0; #5000000;
-       btnL = 1; #5000000 btnL = 0; #5000000;
+       btnL = 1; #50000000 btnL = 0; #50000000;
+       btnU = 1; #50000000 btnU = 0; #50000000;
+       btnR = 1; #50000000 btnR = 0; #50000000;
+       btnD = 1; #50000000 btnD = 0; #50000000;
        
 
        $finish;

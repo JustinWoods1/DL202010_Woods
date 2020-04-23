@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1587651198">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1587656725">
   <File Type="PA-TCL" Name="guessing_game.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="guessing_game_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="guessing_game_reports.tcl"/>
@@ -112,6 +112,22 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/btnR.xdc"/>
         <Attr Name="ImportTime" Val="1587610092"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/sseg.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab 10/Lab 10/sseg.xdc"/>
+        <Attr Name="ImportTime" Val="1586444797"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/Lab 10/switches.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Lab 10/Lab 10/switches.xdc"/>
+        <Attr Name="ImportTime" Val="1586400177"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>

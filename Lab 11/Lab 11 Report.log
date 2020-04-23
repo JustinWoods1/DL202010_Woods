@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.25)  22 APR 2020 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.25)  23 APR 2020 12:08
 entering extended mode
 **"./Lab 11 Report.tex"
 ("Lab 11 Report.tex"
@@ -315,8 +315,20 @@ d-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count267
 \l__pdf_internal_box=\box48
+) ("Lab 11 Report.aux"
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
 )
-No file "Lab 11 Report".aux.
 \openout1 = `"Lab 11 Report.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -335,6 +347,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -419,6 +432,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
 LaTeX Info: Redefining \nameref on input line 60.
+ ("Lab 11 Report.out") ("Lab 11 Report.out")
 \@outlinefile=\write3
 \openout3 = `"Lab 11 Report.out"'.
 
@@ -433,131 +447,301 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {C:/Users/jawoo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 89.
+(Font)              <10.95> on input line 88.
+<bounce2Waveform.jpg, id=15, 934.692pt x 154.77824pt>
+File: bounce2Waveform.jpg Graphic file (type jpg)
+<use bounce2Waveform.jpg>
+Package pdftex.def Info: bounce2Waveform.jpg  used on input line 100.
+(pdftex.def)             Requested size: 469.75502pt x 77.78806pt.
+<guessFSMwaveform.jpg, id=16, 629.35126pt x 155.98276pt>
+File: guessFSMwaveform.jpg Graphic file (type jpg)
+<use guessFSMwaveform.jpg>
+Package pdftex.def Info: guessFSMwaveform.jpg  used on input line 119.
+(pdftex.def)             Requested size: 469.75502pt x 116.42744pt.
 
+! Misplaced \noalign.
+\midrule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global \@...
+l.134 		\midrule
+                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-! LaTeX Error: File `' not found.
+! Missing } inserted.
+<inserted text> 
+                }
+l.135 		s
+         eg   & 7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Missing } inserted.
+<inserted text> 
+                }
+l.135 		s
+         eg   & 7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.135 		s
+         eg   & 7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.135 		s
+         eg   & 7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.135 		s
+         eg   & 7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Undefined control sequence.
+\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
                                                   
-l.101 ...ics[width=1\textwidth,angle=0,origin=c]{}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.135 		s
+         eg   & 7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Misplaced alignment tab character &.
+l.135 		seg   &
+                7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Overfull \hbox (26.97295pt too wide) in paragraph at lines 89--102
- [][] 
- []
+! Misplaced alignment tab character &.
+l.135 		seg   & 7e-7d &
+                        7d-7f & 7f & 7f & 7f & 7f & 7f & 7f \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
+! Misplaced alignment tab character &.
+l.135 		seg   & 7e-7d & 7d-7f &
+                                7f & 7f & 7f & 7f & 7f & 7f \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-! LaTeX Error: File `' not found.
+! Misplaced alignment tab character &.
+l.135 		seg   & 7e-7d & 7d-7f & 7f &
+                                     7f & 7f & 7f & 7f & 7f \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.121 ...ics[width=1\textwidth,angle=0,origin=c]{}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Misplaced alignment tab character &.
+l.135 		seg   & 7e-7d & 7d-7f & 7f & 7f &
+                                          7f & 7f & 7f & 7f \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
+! Misplaced alignment tab character &.
+l.135 		seg   & 7e-7d & 7d-7f & 7f & 7f & 7f &
+                                               7f & 7f & 7f \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-! LaTeX Error: File `' not found.
+! Misplaced alignment tab character &.
+l.135 ...g   & 7e-7d & 7d-7f & 7f & 7f & 7f & 7f &
+                                                   7f & 7f \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127 ...h,trim =0 0 0 0,clip, angle=0,origin=c]{}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Misplaced alignment tab character &.
+l.135 ... 7e-7d & 7d-7f & 7f & 7f & 7f & 7f & 7f &
+                                                   7f \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
+! Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.136 		a
+         n    & b& e  & e&e& e  & e&e& e \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-! LaTeX Error: File `' not found.
+! Misplaced alignment tab character &.
+l.136 		an    &
+                b& e  & e&e& e  & e&e& e \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.133 ...th,trim =0 0 0 0,clip,angle=0,origin=c]{}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Misplaced alignment tab character &.
+l.136 		an    & b&
+                   e  & e&e& e  & e&e& e \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-[2
+! Misplaced alignment tab character &.
+l.136 		an    & b& e  &
+                        e&e& e  & e&e& e \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-] [3]
-("C:\Users\jawoo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
-sty"
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-)
-("C:\Users\jawoo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang2.
-sty"
-File: lstlang2.sty 2019/09/10 1.8c listings language file
-)
-("C:\Users\jawoo\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang3.
-sty"
-File: lstlang3.sty 2019/09/10 1.8c listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 144.
- [4
+! Misplaced alignment tab character &.
+l.136 		an    & b& e  & e&
+                          e& e  & e&e& e \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-] [5
+! Misplaced alignment tab character &.
+l.136 		an    & b& e  & e&e&
+                             e  & e&e& e \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-] [6
+! Misplaced alignment tab character &.
+l.136 		an    & b& e  & e&e& e  &
+                                  e&e& e \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
- [7
+! Misplaced alignment tab character &.
+l.136 		an    & b& e  & e&e& e  & e&
+                                    e& e \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
- ("Lab 11 Report.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
+! Misplaced alignment tab character &.
+l.136 		an    & b& e  & e&e& e  & e&e&
+                                       e \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
+! Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.137 		l
+         ed    & 0000  & 0000-8000   & 8000   & 8000   & 0000-4000 &   0-800...
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Package rerunfilecheck Warning: File `"Lab 11 Report".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+! Misplaced alignment tab character &.
+l.137 		led    &
+                 0000  & 0000-8000   & 8000   & 8000   & 0000-4000 &   0-800...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Package rerunfilecheck Info: Checksums for `"Lab 11 Report".out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+! Misplaced alignment tab character &.
+l.137 		led    & 0000  &
+                         0000-8000   & 8000   & 8000   & 0000-4000 &   0-800...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+! Misplaced alignment tab character &.
+l.137 		led    & 0000  & 0000-8000   &
+                                       8000   & 8000   & 0000-4000 &   0-800...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
- ) 
-Here is how much of TeX's memory you used:
- 8704 strings out of 481556
- 129424 string characters out of 2913869
- 593074 words of memory out of 3000000
- 23798 multiletter control sequences out of 15000+200000
- 537062 words of font info for 40 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 34i,9n,49p,1206b,1371s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/jawoo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb><C:/Users/jawoo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><C:/Users/jawoo/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jawoo/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jawoo/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "Lab 11 Report.pdf" (7 pages, 71225 bytes).
-PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+! Misplaced alignment tab character &.
+l.137 		led    & 0000  & 0000-8000   & 8000   &
+                                                8000   & 0000-4000 &   0-800...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if

@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -64,6 +65,12 @@ set_property used_in_implementation false [get_files C:/Users/jawoo/Desktop/Logi
 
 read_xdc C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab11_guess/btnR.xdc
 set_property used_in_implementation false [get_files C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab11_guess/btnR.xdc]
+
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab 10/sseg.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab 10/sseg.xdc}}]
+
+read_xdc {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab 10/switches.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab11_guess/Lab11_guess.srcs/constrs_1/imports/Lab 10/switches.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

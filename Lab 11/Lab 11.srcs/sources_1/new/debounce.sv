@@ -3,7 +3,7 @@
 
 module  debounce  #( parameter N = 21)
     (input clk , reset ,
-     input   in ,
+     input   in,
      output  reg out ,
      output  reg  tick);
      
@@ -41,35 +41,35 @@ module  debounce  #( parameter N = 21)
                 out = 0;
                 counter_next = {N{1'b1}};
                 if (in)
-                state_next = wait1;
-            end
+                    state_next = wait1;
+                end
             
-        wait1: begin
-            out = 0;      //  Moore  output
-            counter_next = counter  - 1;
-            if (counter  == 0) begin
-                tick = 1'b1; // Mealy output
-                state_next = one;
-            end
-            else if (~in)
-                state_next = zero;
-            end
+            wait1: begin
+                out = 0;      //  Moore  output
+                counter_next = counter  - 1;
+                if (counter  == 0) begin
+                    tick = 1'b1; // Mealy output
+                    state_next = one;
+                end
+                else if (~in)
+                    state_next = zero;
+                end
             
-        one: begin
-            out = 1;
-            counter_next = {N{1'b1}};
-            if (~in)
-                state_next    = wait0;
-        end
+            one: begin
+                out = 1;
+                counter_next = {N{1'b1}};
+                if (~in)
+                    state_next    = wait0;
+                end
         
-        wait0: begin
-            out = 1;
-            counter_next = counter  - 1;
-            if (counter  == 0)
-                state_next = zero;
-            else if (in)
-                state_next = one;
-            end
+            wait0: begin
+                out = 1;
+                counter_next = counter  - 1;
+                if (counter  == 0)
+                    state_next = zero;
+                else if (in)
+                    state_next = one;
+                end
         endcase
     end
 endmodule  //  debounce

@@ -200,3 +200,15 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "debounc
 // HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 8:45:58 AM CDT
 // WARNING: HEventQueue.dispatchEvent() is taking  1269 ms.
 // HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 9:15:59 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 9:45:59 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 10:15:59 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 10:46:00 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 11:16:00 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 11:46:00 AM CDT
+// Elapsed time: 55268 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "debounce.sv", 1); // k (j, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+closeMainWindow("Lab 11 - [C:/Users/jawoo/Desktop/Logic/DL202010_Woods/Lab 11/Lab 11.xpr] - Vivado 2018.3"); // cp
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Apr 23 09:14:43 2020
+| Date         : Thu Apr 23 10:46:42 2020
 | Host         : DESKTOP-3R8VEF6 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file guessing_game_methodology_drc_routed.rpt -pb guessing_game_methodology_drc_routed.pb -rpx guessing_game_methodology_drc_routed.rpx
 | Design       : guessing_game
@@ -35,7 +35,7 @@ Table of Contents
 -----------------
 TIMING-14#1 Warning
 LUT on the clock tree  
-The LUT count/FSM_onehot_state[5]_i_3 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+The LUT count/FSM_sequential_state[2]_i_2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 TIMING-18#1 Warning

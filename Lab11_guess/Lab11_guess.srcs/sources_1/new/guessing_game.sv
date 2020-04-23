@@ -7,7 +7,7 @@ module guessing_game
     );
      
     wire [3:0] dataForGuess;
-    wire userTime, toMux;
+    wire userTime, toMux, winout, loseout;
      
     debounce  #(.N(2)) d1 (.clk(clk),
         .reset(btnC), .in(btnU), .out(dataForGuess[0]),
@@ -31,13 +31,15 @@ module guessing_game
     mux2 #(.N(1)) m1 (.in1(toMux), .in0(clk),
      .sel(sw), .out(userTime));
     
-    guess_FSM  #(.N(2)) gfms (.clk(userTime),
-        .reset(btnC), .b(dataForGuess), .win(led[15]), .lose(led[14]),
+    guess_FSM  #(.N(3)) gfms (.clk(userTime),
+        .reset(btnC), .b(dataForGuess), .win(winout), .lose(loseout),
         .y(seg[3:0]), .tick());
    
    assign an = 1;
    assign seg[6:4] = 0;
    assign led[13:0] = 0;
+   assign led[14] = winout;
+   assign led[15] = loseout;
         
    
     

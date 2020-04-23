@@ -10,7 +10,7 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.debounce(N=2)
 Compiling module xil_defaultlib.counter(N=2)
 Compiling module xil_defaultlib.mux2(N=1)
-Compiling module xil_defaultlib.guess_FSM(N=2)
+Compiling module xil_defaultlib.guess_FSM(N=3)
 Compiling module xil_defaultlib.guessing_game
 Compiling module xil_defaultlib.guessing_gameTEST
 Compiling module xil_defaultlib.glbl

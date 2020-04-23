@@ -63,6 +63,7 @@ showspaces=false,                        % don't underscore spaces
 \maketitle
 
 \section*{Summary}
+	In this lab, a finite state machine(FSM) was created. This required the use of sequential logic, but in a way that does not produce repeating patterns. First, a debounce module was created so that when the Basys3 buttons are pressed, the output does not cycle. Thus, the input is held. Then, a guessing game module was created using the same usage of states, but in a way that produces an output appropriate for a guessing game. These two modules were instantiated in a top level module implemented into the Basys3 board, tested by gameplay. 
 
 \section*{Questions}
 
@@ -72,9 +73,12 @@ showspaces=false,                        % don't underscore spaces
 	After 200ns, it would change states. It went from zero to wait1 at 220ns, wait1 to one at 420ns, and one to wait0 at 620ns.
 	
 	\item Why  can  this  game  not  be  implemented with regular sequential logic?
+	
+	We cannot use regular sequential logic because the output is not regular, or repeating. We designed an element that can handle non-repeating conditions by creating several states that the input can but the element in. 
 
 	\item What type of outputs did you use for your design (Mealy or Moore)?  Explain.
 	
+	I used Moore outputs in my design. We see this in that the values of the output are synchronized with the clock, updating at the positive edge, and resetting at the negative edge. This way, only the present state of the machine can change the output.  
 
 \end{enumerate}
 \clearpage
@@ -94,8 +98,8 @@ showspaces=false,                        % don't underscore spaces
 		\bottomrule
 	\end{tabular}
 	\bigskip
-	\includegraphics[width=1\textwidth,angle=0,origin=c]{counterWaveform}
-	\caption{Counter Simulation Waveform and ERT}
+	\includegraphics[width=1\textwidth,angle=0,origin=c]{}
+	\caption{}
 	\label{fig:sim_with_table}
 \end{figure}
 
@@ -114,20 +118,20 @@ showspaces=false,                        % don't underscore spaces
 		\bottomrule
 	\end{tabular}
 	\bigskip
-	\includegraphics[width=1\textwidth,angle=0,origin=c]{sseg4tdmWaveform}
-	\caption{sseg4TDM Simulation Waveform and ERT}
+	\includegraphics[width=1\textwidth,angle=0,origin=c]{}
+	\caption{}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\includegraphics[width=1\textwidth,trim =0 200 0 0,clip, angle=0,origin=c]{sseg4tdmdiagram}
-	\caption{sseg4tdm Schematic}
+	\includegraphics[width=1\textwidth,trim =0 0 0 0,clip, angle=0,origin=c]{}
+	\caption{}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\includegraphics[width=0.65\textwidth,trim =0 0 0 0,clip,angle=90,origin=c]{calclab10diagram}
-	\caption{calclab10 Schematic}
+	\includegraphics[width=1\textwidth,trim =0 0 0 0,clip,angle=0,origin=c]{}
+	\caption{}
 	\label{fig:sim_with_table}
 \end{figure}
 
@@ -135,221 +139,41 @@ showspaces=false,                        % don't underscore spaces
 \section*{Code}
 
 \begin{lstlisting}[style=Verilog,
-caption=Counter Source Code,
+caption=guessFSM,
 label=MUX w/ two inputs Source Code
 ]
-	module counter #(parameter N=1) 
-		( 
-		input clk, rst, en,
-		output [N-1:0] count, 
-		output tick 
-		);
-		
-		// internal signals
-		reg [N-1:0] Q_reg , Q_next;
-		
-		// register (state memory)
-		always @(posedge clk, posedge rst) 
-		begin
-			if (rst) 
-				Q_reg <= 0; 
-			else
-				Q_reg <= Q_next;
-		end
-		
-		// next -state logic 
-		always @* 
-			begin 
-			if (en) 
-				Q_next = Q_reg + 1; 
-			else 
-				Q_next = Q_reg; // no change 
-		end
-		
-		// output logic 
-		assign count = Q_reg; 
-		assign tick = (Q_reg=={N{1'b1}}) ? 1'b1 : 1'b0;
 	
-	endmodule
 \end{lstlisting}
 \clearpage
 
 \begin{lstlisting}[style=Verilog,
-caption=Counter Test,
+caption=guessFSM Test,
 label=MUX2 Test
 ]
-	module counterTest();
 	
-		reg clk, en, rst;
-		wire [1:0] count;
-		wire tick;
-		
-		counter #(.N(2)) c(.count(count), .clk(clk),
-			.en(en), .rst(rst),
-			.tick(tick) );
-	
-		always begin 
-			clk = ~clk; #5; 
-		end
-		
-		// this block only runs once
-		initial begin
-			clk=0; en=0; rst=0; ; #5;
-			rst = 1; #5;
-			// reset
-			en = 1; rst = 0; #10;
-			en = 0;     #5;
-			en = 1;     #5;
-			en = 0;     #10;
-			en = 1;     #5;
-			$finish;
-		end 
-	endmodule
 \end{lstlisting}
 
 \begin{lstlisting}[style=Verilog,
 caption= Sseg4TDM Source Code,
 label=MUX w/ four inputs Source Code
 ]
-	module sseg4_TDM(
-		input [15:0]data,
-		input hex_dec, sign,
-		input reset, clock,
-		output [6:0] seg,
-		output [3:0] an,
-		output dp
-		);
-		
-		wire [15:0] mux2mux4, bcd2mux2;
-		wire [6:0] ssegmux2;
-		wire [3:0] mux4sseg, anan;
-		wire [1:0] digit_sel;
-		wire andmux2;
-		wire timer2counter;
-		
-		bcd11 bcd11in(
-			.in(data[10:0]),
-			.out(bcd2mux2)
-			);
-		mux2 #(.N(16)) mux2num1(
-			.in0(data), .in1(bcd2mux2), .sel(hex_dec),
-			.out(mux2mux4)
-			);
-		mux4 mux4num1(
-			.in3(mux2mux4[15:12]), .in2(mux2mux4[11:8]), 
-			.in1(mux2mux4[7:4]), .in0(mux2mux4[3:0]),
-			.sel(digit_sel),
-			.out(mux4sseg)
-			);
-		sseg_decoder ssegdecode(
-			.in(mux4sseg),
-			.out(ssegmux2)
-			);
-		mux2 #(.N(7)) mux2num2(
-			.in1(7'b0111111), .in0(ssegmux2), .sel(andmux2),
-			.out(seg[6:0])
-			);
-		and A1(
-			andmux2,
-			sign, ~anan[3]
-			);
-		an_decoder andecode(
-			.in(digit_sel),
-			.out(anan)
-			);
-		
-		counter #(.N(18)) timer(
-			.en(1'b1), .clk(clock), .rst(reset),
-			.count(), .tick(timer2counter)
-			);
-		
-		counter #(.N(2)) counter2(
-			.en(1'b1), .clk(timer2counter), .rst(reset),
-			.count(digit_sel), .tick()
-			);
-		
-		assign an = anan;
-		assign dp = 1;
+
 	
-	endmodule
 \end{lstlisting}
 \clearpage
 \begin{lstlisting}[style=Verilog,
 caption=Sseg4TDM Test,
 label=MUX4 Test
 ]
-	module sseg4_TDMTEST();
 	
-		reg [15:0]data;
-		reg hex_dec, sign;
-		reg reset, clock;
-		wire [6:0] seg;
-		wire [3:0] an;
-		wire dp;
-		
-		sseg4_TDM  s(.data(data), .hex_dec(hex_dec),
-			.sign(sign), .reset(reset), .clock(clock),
-			.seg(seg), .an(an), .dp(dp)
-			);
-		
-		always begin 
-			clock = ~clock; #5; 
-		end
-		
-		// this block only runs once
-		initial begin
-			clock = 0; reset=0; #5;
-			reset = 1; #5;
-		
-			// reset
-			reset = 0; sign = 0; hex_dec = 0; 
-			data = 16'b0000000001000001; #2000000;
-			data = 16'b0000000010000010; #2000000;
-			data = 16'b0000000100000011; #2000000;
-			data = 16'b0000001000000100; #2000000;
-			reset = 0; sign = 0; hex_dec = 1; 
-			data = 16'b0000000001000001; #2000000;
-			data = 16'b0000000010000010; #2000000;
-			data = 16'b0000000100000011; #2000000;
-			data = 16'b0000001000000100; #2000000;
-			reset = 0; sign = 1; hex_dec = 1; 
-			data = 16'b0000000001000001; #2000000;
-			data = 16'b0000000010000010; #2000000;
-			data = 16'b0000000100000011; #2000000;
-			data = 16'b0000001000000100; #2000000;
-			
-			$finish;
-		end 
-	endmodule
 \end{lstlisting}
 \clearpage
 \begin{lstlisting}[style=Verilog,
 caption=CalcLab10,
 label=MUX2 Test
 ]
-	module calc_lab10(
-		input btnU, btnD, clk, btnC,
-		input [15:0]sw,
-		output [6:0] seg,
-		output [3:0] an,
-		output [15:0] led,
-		output dp
-		);
 	
-	
-		top_lab9 calc_unit(
-			.btnU(btnU), .btnD(btnD), .clk(clk), .btnC(btnC),
-			.sw(sw),
-			.led(led)
-			);
-		
-		sseg4_TDM disp_unit(
-			.data({8'b00000000, led[15:8]}), .hex_dec(sw[15]),
-			.sign(sw[14]), .reset(btnC), .clock(clk),
-			.seg(seg), .an(an), .dp(dp)
-			);
-	
-	endmodule
+
 \end{lstlisting}
 
 

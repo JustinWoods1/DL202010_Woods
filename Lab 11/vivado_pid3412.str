@@ -191,3 +191,12 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "debounc
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "debounceTEST.sv", 2); // k (j, cp)
 // HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/22/20, 9:02:53 PM CDT
 // HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/22/20, 9:32:53 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 45 MB. Current time: 4/22/20, 10:02:53 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/22/20, 10:32:54 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/22/20, 11:02:54 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/22/20, 11:32:54 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 2:43:57 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1003 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 8:45:58 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1269 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 687 MB. GUI used memory: 44 MB. Current time: 4/23/20, 9:15:59 AM CDT

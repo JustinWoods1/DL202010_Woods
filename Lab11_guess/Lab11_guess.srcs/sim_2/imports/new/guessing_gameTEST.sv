@@ -25,18 +25,23 @@ module guessing_gameTEST();
        btnC = 0; btnU = 0; btnL = 0; btnR = 0; btnD = 0;
        #10;
        
-       btnC = 1; #5;
-       btnC = 0; #5;
+       btnC = 1; #500000;
+       btnC = 0; #500000;
        
-       btnL = 1; #5 btnL = 0; #5;
-       btnL = 1; #5 btnL = 0; #5;
-       btnL = 1; #5 btnL = 0; #5;
-       btnL = 1; #5 btnL = 0; #5;
-       
-       #250;
+     btnL = 1; #50000000 btnL = 0; #50000000;
+     btnL = 1; #50000000 btnL = 0; #50000000;
+     btnL = 1; #50000000 btnL = 0; #50000000;
+     btnL = 1; #50000000 btnL = 0; #50000000;
+     
+
        sw = 0;
        btnC = 1; #5;
        btnC = 0; #25;
+       
+       btnL = 1; #5000000 btnL = 0; #5000000;
+       btnL = 1; #5000000 btnL = 0; #5000000;
+       btnL = 1; #5000000 btnL = 0; #5000000;
+       btnL = 1; #5000000 btnL = 0; #5000000;
        
 
        $finish;
